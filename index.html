@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DATA-SHIELD | Gobernanza de IA & Seguridad de Datos para LATAM</title>
+    <meta name="description" content="DATA-SHIELD: Consultora especializada en gobernanza de inteligencia artificial, cumplimiento regulatorio y seguridad de datos para empresas latinoamericanas. Protege tu negocio, adopta IA responsable.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Particle Canvas Background -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <div class="logo-icon">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <path d="M16 2L28 9V23L16 30L4 23V9L16 2Z" stroke="url(#logoGrad)" stroke-width="2" fill="none"/>
+                        <path d="M16 8L22 11.5V18.5L16 22L10 18.5V11.5L16 8Z" fill="url(#logoGrad)" opacity="0.3"/>
+                        <circle cx="16" cy="16" r="3" fill="url(#logoGrad)"/>
+                        <defs>
+                            <linearGradient id="logoGrad" x1="4" y1="2" x2="28" y2="30">
+                                <stop offset="0%" stop-color="#00F0FF"/>
+                                <stop offset="100%" stop-color="#7B61FF"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <span class="logo-text">DATA-SHIELD</span>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="#about" class="nav-link">Nosotros</a>
+                <a href="#services" class="nav-link">Servicios</a>
+                <a href="#industries" class="nav-link">Industrias</a>
+                <a href="#advantages" class="nav-link">Ventajas</a>
+                <a href="#team" class="nav-link">Equipo</a>
+                <a href="#metrics" class="nav-link">Métricas</a>
+                <a href="#roadmap" class="nav-link">Roadmap</a>
+                <a href="#contact" class="nav-link nav-link--cta">Contacto</a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                Consultora de Gobernanza IA & Datos — LATAM
+            </div>
+            <h1 class="hero-title">
+                Tu dato <span class="gradient-text">seguro</span>,<br>
+                tu negocio <span class="gradient-text">protegido</span>.
+            </h1>
+            <p class="hero-subtitle">
+                Ayudamos a empresas latinoamericanas a adoptar IA de forma responsable y 
+                cumplir con las nuevas regulaciones de privacidad, evitando sanciones millonarias 
+                y construyendo confianza con sus clientes.
+            </p>
+            <div class="hero-actions">
+                <a href="#contact" class="btn btn-primary">
+                    <span>Agenda una consulta</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+                <a href="#services" class="btn btn-secondary">Explorar servicios</a>
+            </div>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <span class="stat-number" data-count="17500">0</span><span class="stat-unit">M+</span>
+                    <span class="stat-label">COP en multas SIC (2024)</span>
+                </div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat">
+                    <span class="stat-number" data-count="77866">0</span>
+                    <span class="stat-label">Denuncias ciberdelitos 2024</span>
+                </div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat">
+                    <span class="stat-number" data-count="96">0</span><span class="stat-unit">%</span>
+                    <span class="stat-label">Sistemas sin analítica avanzada</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="shield-container">
+                <div class="shield-ring ring-1"></div>
+                <div class="shield-ring ring-2"></div>
+                <div class="shield-ring ring-3"></div>
+                <div class="shield-core">
+                    <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+                        <path d="M40 8L68 22V46C68 58 56 68 40 74C24 68 12 58 12 46V22L40 8Z" stroke="url(#shieldGrad)" stroke-width="2" fill="url(#shieldGrad)" fill-opacity="0.1"/>
+                        <path d="M40 24L32 40H38V52L48 36H42L40 24Z" fill="url(#shieldGrad)"/>
+                        <defs>
+                            <linearGradient id="shieldGrad" x1="12" y1="8" x2="68" y2="74">
+                                <stop offset="0%" stop-color="#00F0FF"/>
+                                <stop offset="50%" stop-color="#7B61FF"/>
+                                <stop offset="100%" stop-color="#00F0FF"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <div class="orbit-node node-1"><span>GDPR</span></div>
+                <div class="orbit-node node-2"><span>LGPD</span></div>
+                <div class="orbit-node node-3"><span>ISO 42001</span></div>
+                <div class="orbit-node node-4"><span>Ley 1581</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About / Problema Section -->
+    <section id="about" class="section about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">El Problema</span>
+                <h2 class="section-title">¿Por qué necesitas <span class="gradient-text">DATA-SHIELD</span>?</h2>
+                <p class="section-desc">En 2024, la SIC gestionó más de 10,000 reclamos en protección de datos. Las empresas que ignoran la gobernanza de IA enfrentan riesgos existenciales.</p>
+            </div>
+            <div class="problem-grid">
+                <div class="problem-card" data-aos="fade-up">
+                    <div class="problem-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <rect x="4" y="14" width="32" height="22" rx="3" stroke="#FF4D6A" stroke-width="2"/>
+                            <path d="M4 20h32" stroke="#FF4D6A" stroke-width="2"/>
+                            <circle cx="10" cy="26" r="2" fill="#FF4D6A"/>
+                            <path d="M20 4L22 10H18L20 4Z" fill="#FF4D6A"/>
+                        </svg>
+                    </div>
+                    <h3>Me van a multar y no sé cómo evitarlo</h3>
+                    <p>Una brecha impacta el flujo de caja, el EBITDA y la continuidad del negocio. La ciberseguridad ya es tema de CFO, no solo de TI.</p>
+                    <span class="problem-stat">$5.000M+ COP en multas potenciales</span>
+                </div>
+                <div class="problem-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="problem-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <circle cx="20" cy="16" r="8" stroke="#FFAA33" stroke-width="2"/>
+                            <path d="M8 36c0-6.6 5.4-12 12-12s12 5.4 12 12" stroke="#FFAA33" stroke-width="2"/>
+                            <path d="M18 14l4 4M22 14l-4 4" stroke="#FFAA33" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Tengo IA en producción sin saber si es legal</h3>
+                    <p>2 de cada 3 Fintech en Colombia implementan IA. Desde 2025, la SIC propuso lineamientos específicos que prohíben prácticas invasivas.</p>
+                    <span class="problem-stat">67% de Fintechs sin compliance IA</span>
+                </div>
+                <div class="problem-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="problem-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <path d="M20 4v16l8 8" stroke="#00F0FF" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="20" cy="20" r="16" stroke="#00F0FF" stroke-width="2"/>
+                            <path d="M20 8v4M20 28v4M8 20h4M28 20h4" stroke="#00F0FF" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Sufrí una brecha y no sé qué hacer</h3>
+                    <p>77,866 denuncias por delitos informáticos en 2024 (+23% vs 2023). La Ley 2300 exige notificar brechas en 72 horas.</p>
+                    <span class="problem-stat">36 mil millones de intentos de ataque</span>
+                </div>
+            </div>
+            <!-- Mission -->
+            <div class="mission-block">
+                <div class="mission-label">Nuestra Misión</div>
+                <blockquote class="mission-quote">
+                    "Ayudar a empresas latinoamericanas a adoptar inteligencia artificial de forma responsable, 
+                    construyendo marcos de gobernanza de datos que garantizan cumplimiento normativo, minimizan 
+                    riesgos legales y generan confianza sostenible con sus clientes."
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Portafolio</span>
+                <h2 class="section-title">Nuestros <span class="gradient-text">Servicios</span></h2>
+                <p class="section-desc">Soluciones especializadas en gobernanza de IA, cumplimiento regulatorio y seguridad de datos para LATAM.</p>
+            </div>
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card" data-aos="fade-up">
+                    <div class="service-number">01</div>
+                    <div class="service-icon-wrapper">
+                        <div class="service-icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                                <path d="M24 6L40 15V33L24 42L8 33V15L24 6Z" stroke="url(#s1)" stroke-width="2" fill="url(#s1)" fill-opacity="0.08"/>
+                                <path d="M24 18v6l5 3" stroke="url(#s1)" stroke-width="2" stroke-linecap="round"/>
+                                <circle cx="24" cy="24" r="8" stroke="url(#s1)" stroke-width="1.5"/>
+                                <defs><linearGradient id="s1" x1="8" y1="6" x2="40" y2="42"><stop stop-color="#00F0FF"/><stop offset="1" stop-color="#7B61FF"/></linearGradient></defs>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="service-name">AI Compliance 360°</h3>
+                    <p class="service-desc">Auditoría exhaustiva de cumplimiento regulatorio para sistemas de IA bajo marcos GDPR, LGPD y regulaciones emergentes de LATAM.</p>
+                    <ul class="service-features">
+                        <li>Evaluación bajo marcos regulatorios de Brasil, Chile, Perú, Colombia</li>
+                        <li>Identificación de riesgos algorítmicos (sesgo, discriminación, transparencia)</li>
+                        <li>Mapeo de datos sensibles y flujos de procesamiento</li>
+                        <li>Informe ejecutivo con plan de remediación priorizado</li>
+                    </ul>
+                    <div class="service-meta">
+                        <div class="meta-item">
+                            <span class="meta-label">Duración</span>
+                            <span class="meta-value">4-6 semanas</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Inversión</span>
+                            <span class="meta-value">$25M - $45M COP</span>
+                        </div>
+                    </div>
+                    <div class="service-tags">
+                        <span class="tag">CDMP</span>
+                        <span class="tag">LGPD/GDPR</span>
+                        <span class="tag">ISO 27001</span>
+                        <span class="tag">Python</span>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-number">02</div>
+                    <div class="service-icon-wrapper">
+                        <div class="service-icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                                <rect x="8" y="12" width="32" height="24" rx="4" stroke="url(#s2)" stroke-width="2" fill="url(#s2)" fill-opacity="0.08"/>
+                                <path d="M16 22h16M16 28h10" stroke="url(#s2)" stroke-width="2" stroke-linecap="round"/>
+                                <circle cx="36" cy="12" r="6" fill="url(#s2)" fill-opacity="0.3" stroke="url(#s2)" stroke-width="1.5"/>
+                                <path d="M34 12l2 2 3-4" stroke="url(#s2)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <defs><linearGradient id="s2" x1="8" y1="6" x2="44" y2="42"><stop stop-color="#7B61FF"/><stop offset="1" stop-color="#00F0FF"/></linearGradient></defs>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="service-name">DataGov ProAI</h3>
+                    <p class="service-desc">Implementación de frameworks de gobernanza de datos diseñados específicamente para alimentar sistemas de IA/ML con calidad empresarial.</p>
+                    <ul class="service-features">
+                        <li>Frameworks de calidad de datos para modelos de ML (great_expectations, dbt tests)</li>
+                        <li>Definición de roles: "Data Owners" por área de negocio</li>
+                        <li>Políticas de linaje y trazabilidad de datos</li>
+                        <li>Capacitación de equipos en cultura data-driven</li>
+                    </ul>
+                    <div class="service-meta">
+                        <div class="meta-item">
+                            <span class="meta-label">Duración</span>
+                            <span class="meta-value">8-12 semanas</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Inversión</span>
+                            <span class="meta-value">$40M - $75M COP</span>
+                        </div>
+                    </div>
+                    <div class="service-tags">
+                        <span class="tag">DAMA-DMBOK</span>
+                        <span class="tag">dbt</span>
+                        <span class="tag">Data Architecture</span>
+                        <span class="tag">SQL/Python</span>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-number">03</div>
+                    <div class="service-icon-wrapper">
+                        <div class="service-icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                                <path d="M24 4l4 8h8l-6 5 2 8-8-5-8 5 2-8-6-5h8l4-8z" stroke="url(#s3)" stroke-width="2" fill="url(#s3)" fill-opacity="0.08"/>
+                                <path d="M12 36h24M16 42h16" stroke="url(#s3)" stroke-width="2" stroke-linecap="round"/>
+                                <defs><linearGradient id="s3" x1="6" y1="4" x2="42" y2="44"><stop stop-color="#00F0FF"/><stop offset="1" stop-color="#00D68F"/></linearGradient></defs>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="service-name">RegulaIA Readiness</h3>
+                    <p class="service-desc">Preparación estratégica para el cumplimiento de regulaciones de IA emergentes en LATAM y Europa, anticipando requisitos futuros.</p>
+                    <ul class="service-features">
+                        <li>Asesoría en marcos de riesgo: Prohibido / Alto Riesgo / Bajo Riesgo</li>
+                        <li>Clasificación de sistemas según propuestas legislativas regionales</li>
+                        <li>Implementación de transparencia algorítmica (SHAP, LIME)</li>
+                        <li>Roadmap de compliance a 12-24 meses</li>
+                    </ul>
+                    <div class="service-meta">
+                        <div class="meta-item">
+                            <span class="meta-label">Duración</span>
+                            <span class="meta-value">3-5 semanas</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Inversión</span>
+                            <span class="meta-value">$18M - $35M COP</span>
+                        </div>
+                    </div>
+                    <div class="service-tags">
+                        <span class="tag">AI Ethics</span>
+                        <span class="tag">XAI</span>
+                        <span class="tag">GDPR/LGPD</span>
+                        <span class="tag">Regulatory</span>
+                    </div>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-number">04</div>
+                    <div class="service-icon-wrapper">
+                        <div class="service-icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                                <path d="M24 8L36 14V26C36 32 30 38 24 40C18 38 12 32 12 26V14L24 8Z" stroke="url(#s4)" stroke-width="2" fill="url(#s4)" fill-opacity="0.08"/>
+                                <path d="M20 24l3 3 5-6" stroke="url(#s4)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <defs><linearGradient id="s4" x1="12" y1="8" x2="36" y2="40"><stop stop-color="#FF4D6A"/><stop offset="1" stop-color="#FFAA33"/></linearGradient></defs>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="service-name">DataBreach ResponsePro</h3>
+                    <p class="service-desc">Servicio de respuesta rápida ante incidentes y brechas de datos, con protocolos de notificación y contención según regulaciones LATAM.</p>
+                    <ul class="service-features">
+                        <li>Protocolos de notificación según LGPD, Ley 21.096, Ley 29733, Ley 1581</li>
+                        <li>Evaluación forense del alcance de la brecha</li>
+                        <li>Comunicación con autoridades (SIC, ANPD)</li>
+                        <li>Controles correctivos post-incidente</li>
+                    </ul>
+                    <div class="service-meta">
+                        <div class="meta-item">
+                            <span class="meta-label">Respuesta</span>
+                            <span class="meta-value">24-72 horas</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Inversión</span>
+                            <span class="meta-value">$15M - $50M COP</span>
+                        </div>
+                    </div>
+                    <div class="service-tags">
+                        <span class="tag">Incident Response</span>
+                        <span class="tag">Forensic</span>
+                        <span class="tag">Crisis Comm</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What we do that AI can't -->
+    <section class="section differentiator">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Diferenciador</span>
+                <h2 class="section-title">¿Qué hacemos que una <span class="gradient-text">IA gratuita</span> no puede?</h2>
+            </div>
+            <div class="diff-grid">
+                <div class="diff-card">
+                    <div class="diff-number">01</div>
+                    <h3>Auditoría Técnico-Legal Híbrida</h3>
+                    <p>Revisamos tu código en producción, detectamos PII sin cifrar, analizamos contratos con proveedores cloud y generamos evidencia admisible ante la SIC.</p>
+                </div>
+                <div class="diff-card">
+                    <div class="diff-number">02</div>
+                    <h3>Remediación Específica por Sector</h3>
+                    <p>Frameworks de consentimiento para Open Finance, políticas de anonimización para salud HL7 FHIR, arquitecturas de datos compatibles con Ley 2300/2023.</p>
+                </div>
+                <div class="diff-card">
+                    <div class="diff-number">03</div>
+                    <h3>Representación Ante Reguladores</h3>
+                    <p>Te acompañamos a reuniones con la SIC, redactamos respuestas formales a requerimientos y negociamos plazos de remediación.</p>
+                </div>
+                <div class="diff-card">
+                    <div class="diff-number">04</div>
+                    <h3>Certificación & Monitoreo Continuo</h3>
+                    <p>Certificamos implementaciones con badge "Certified by DATA-SHIELD", ofrecemos respaldo legal en auditorías y monitoreo post-implementación.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries Section -->
+    <section id="industries" class="section industries">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Sectores</span>
+                <h2 class="section-title">Industrias que <span class="gradient-text">protegemos</span></h2>
+                <p class="section-desc">Sectores con mayor urgencia en gobernanza de datos e IA en Latinoamérica.</p>
+            </div>
+            <div class="industries-grid">
+                <div class="industry-card" data-aos="fade-up">
+                    <div class="industry-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <rect x="8" y="8" width="32" height="32" rx="6" stroke="#00F0FF" stroke-width="2"/>
+                            <path d="M16 28l4-8 4 4 4-12 4 16" stroke="#00F0FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Fintech & Servicios Financieros</h3>
+                    <p>Altamente regulados y adoptando IA rápidamente. 95 empresas de crédito digital generando +$196 mil millones en ingresos.</p>
+                    <span class="industry-highlight">Sector #1 en ciberataques 2025</span>
+                </div>
+                <div class="industry-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="industry-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <path d="M24 8v8M20 12h8" stroke="#7B61FF" stroke-width="2.5" stroke-linecap="round"/>
+                            <rect x="12" y="20" width="24" height="20" rx="4" stroke="#7B61FF" stroke-width="2"/>
+                            <path d="M20 28h8M20 33h5" stroke="#7B61FF" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Salud y Seguros</h3>
+                    <p>Datos ultra sensibles con adopción acelerada de telemedicina. Concentra la mayoría de sanciones SIC.</p>
+                    <span class="industry-highlight">Top en sanciones SIC 2023-2024</span>
+                </div>
+                <div class="industry-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="industry-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <path d="M8 40V16l8-8h16l8 8v24" stroke="#00D68F" stroke-width="2"/>
+                            <rect x="18" y="28" width="12" height="12" stroke="#00D68F" stroke-width="2"/>
+                            <path d="M24 12v8" stroke="#00D68F" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Retail y E-commerce</h3>
+                    <p>Explosión de datos de clientes + presión por personalización con IA = riesgo masivo de incumplimiento.</p>
+                    <span class="industry-highlight">Top 5 sectores en ciberataques</span>
+                </div>
+                <div class="industry-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="industry-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <rect x="10" y="18" width="28" height="20" rx="3" stroke="#FFAA33" stroke-width="2"/>
+                            <path d="M18 18V14a6 6 0 0 1 12 0v4" stroke="#FFAA33" stroke-width="2"/>
+                            <circle cx="24" cy="28" r="3" fill="#FFAA33"/>
+                            <path d="M24 31v4" stroke="#FFAA33" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Gobierno y Sector Público</h3>
+                    <p>Solo el 25% de los países de la región tienen implementado un marco de calidad de datos según World Bank.</p>
+                    <span class="industry-highlight">75% sin marco de calidad de datos</span>
+                </div>
+                <div class="industry-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="industry-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <path d="M24 8L8 20v20h32V20L24 8Z" stroke="#FF4D6A" stroke-width="2"/>
+                            <path d="M16 28l4-4 4 4 4-8 4 8" stroke="#FF4D6A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Minería y Energía</h3>
+                    <p>Solo el 26% tiene gobernanza de datos bien implementada. Sector crítico con datos operacionales masivos.</p>
+                    <span class="industry-highlight">74% sin gobernanza implementada</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Competitive Advantages -->
+    <section id="advantages" class="section advantages">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Ventaja Competitiva</span>
+                <h2 class="section-title">¿Por qué elegir <span class="gradient-text">DATA-SHIELD</span>?</h2>
+            </div>
+            <div class="advantages-grid">
+                <div class="advantage-item" data-aos="fade-right">
+                    <div class="adv-icon">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 3L17 10H24L18.5 14.5L20.5 22L14 17.5L7.5 22L9.5 14.5L4 10H11L14 3Z" fill="#FF4D6A"/></svg>
+                    </div>
+                    <div class="adv-content">
+                        <h3>Urgencia Regulatoria</h3>
+                        <p>Las empresas DEBEN cumplir, no es opcional. Las sanciones son millonarias y crecientes.</p>
+                    </div>
+                </div>
+                <div class="advantage-item" data-aos="fade-right" data-aos-delay="100">
+                    <div class="adv-icon">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="10" stroke="#00F0FF" stroke-width="2"/><path d="M10 14h8M14 10v8" stroke="#00F0FF" stroke-width="2" stroke-linecap="round"/></svg>
+                    </div>
+                    <div class="adv-content">
+                        <h3>Diferenciación AI-First</h3>
+                        <p>La mayoría de consultoras tradicionales no entienden IA. Nosotros nacimos desde la intersección IA + Legal + Datos.</p>
+                    </div>
+                </div>
+                <div class="advantage-item" data-aos="fade-right" data-aos-delay="200">
+                    <div class="adv-icon">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="4" y="4" width="20" height="20" rx="4" stroke="#7B61FF" stroke-width="2"/><path d="M10 14l3 3 5-6" stroke="#7B61FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <div class="adv-content">
+                        <h3>Mercado Desatendido</h3>
+                        <p>El 96% de los sistemas de información gerencial en la región se usan exclusivamente para análisis descriptivo.</p>
+                    </div>
+                </div>
+                <div class="advantage-item" data-aos="fade-right" data-aos-delay="300">
+                    <div class="adv-icon">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 4v20M4 14h20" stroke="#00D68F" stroke-width="2" stroke-linecap="round"/><circle cx="14" cy="14" r="4" fill="#00D68F" fill-opacity="0.3"/></svg>
+                    </div>
+                    <div class="adv-content">
+                        <h3>Recurrencia</h3>
+                        <p>Mantenimiento continuo, auditorías periódicas y actualización regulatoria generan ingresos recurrentes.</p>
+                    </div>
+                </div>
+                <div class="advantage-item" data-aos="fade-right" data-aos-delay="400">
+                    <div class="adv-icon">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 4L24 10v8L14 24 4 18V10L14 4Z" stroke="#FFAA33" stroke-width="2"/><path d="M14 10v8" stroke="#FFAA33" stroke-width="2" stroke-linecap="round"/><circle cx="14" cy="22" r="1.5" fill="#FFAA33"/></svg>
+                    </div>
+                    <div class="adv-content">
+                        <h3>Alto Valor Percibido</h3>
+                        <p>Evitar multas millonarias justifica fácilmente los honorarios. Una consultoría de $50M-$200M COP vs multas de $5.000M+ COP.</p>
+                    </div>
+                </div>
+                <div class="advantage-item" data-aos="fade-right" data-aos-delay="500">
+                    <div class="adv-icon">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="6" y="12" width="16" height="12" rx="2" stroke="#FF4D6A" stroke-width="2"/><path d="M10 12V9a4 4 0 118 0v3" stroke="#FF4D6A" stroke-width="2"/></svg>
+                    </div>
+                    <div class="adv-content">
+                        <h3>Barrera de Entrada Técnica</h3>
+                        <p>Requiere conocimiento especializado en IA + Legal + Datos. Combinación rara y difícil de replicar.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="section team">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Equipo Fundador</span>
+                <h2 class="section-title">Quiénes <span class="gradient-text">somos</span></h2>
+                <p class="section-desc">Un equipo multidisciplinario con expertise en IA, gobernanza de datos y compliance regulatorio.</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-card" data-aos="fade-up">
+                    <div class="team-avatar">
+                        <div class="avatar-placeholder">EM</div>
+                        <div class="avatar-ring"></div>
+                    </div>
+                    <h3>Esteban Molina</h3>
+                    <span class="team-role">Director General (CEO)</span>
+                    <p class="team-desc">Liderazgo estratégico, visión de negocio y relaciones con clientes. Especialista en arquitectura de datos y soluciones de IA.</p>
+                    <div class="team-certs">
+                        <span>CDMP</span>
+                        <span>ISO 42001</span>
+                        <span>Data Architecture</span>
+                    </div>
+                </div>
+                <div class="team-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="team-avatar">
+                        <div class="avatar-placeholder">MV</div>
+                        <div class="avatar-ring"></div>
+                    </div>
+                    <h3>Miguel Villegas</h3>
+                    <span class="team-role">Arquitecto de Datos</span>
+                    <p class="team-desc">Diseño e implementación de frameworks de gobernanza de datos empresariales. Experto en dbt, SQL avanzado y pipelines de ML.</p>
+                    <div class="team-certs">
+                        <span>CDMP</span>
+                        <span>DAMA-DMBOK</span>
+                        <span>dbt Expert</span>
+                    </div>
+                </div>
+                <div class="team-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="team-avatar">
+                        <div class="avatar-placeholder">FC</div>
+                        <div class="avatar-ring"></div>
+                    </div>
+                    <h3>Felipe Castro</h3>
+                    <span class="team-role">Especialista Legal-Compliance</span>
+                    <p class="team-desc">Navegación regulatoria en frameworks de IA para LATAM. Experto en GDPR, LGPD, Ley 1581 y regulaciones emergentes.</p>
+                    <div class="team-certs">
+                        <span>CIPP/E</span>
+                        <span>LGPD/GDPR</span>
+                        <span>AI Ethics</span>
+                    </div>
+                </div>
+            </div>
+            <div class="team-model">
+                <div class="model-badge">Modelo Híbrido</div>
+                <p>Equipo core fijo de 3 fundadores + red de freelancers especializados que se contratan por proyecto. Este modelo permite escalar de 12 a 80 proyectos anuales mientras los costos fijos crecen solo ×1.6.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Financial Metrics Section -->
+    <section id="metrics" class="section metrics">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Proyección Financiera</span>
+                <h2 class="section-title">Métricas <span class="gradient-text">clave</span></h2>
+                <p class="section-desc">Modelo financiero validado con proyección a 5 años y retorno de inversión comprobado.</p>
+            </div>
+            <div class="metrics-showcase">
+                <div class="metric-card metric-featured" data-aos="zoom-in">
+                    <div class="metric-label">VPN @ 22%</div>
+                    <div class="metric-value">+$632M</div>
+                    <div class="metric-unit">COP</div>
+                    <div class="metric-sub">El proyecto crea valor</div>
+                </div>
+                <div class="metric-card" data-aos="zoom-in" data-aos-delay="50">
+                    <div class="metric-label">TIR</div>
+                    <div class="metric-value">54.9%</div>
+                    <div class="metric-sub">2.5× el WACC</div>
+                </div>
+                <div class="metric-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="metric-label">ROI a 5 años</div>
+                    <div class="metric-value">811%</div>
+                    <div class="metric-sub">Retorno comprobado</div>
+                </div>
+                <div class="metric-card" data-aos="zoom-in" data-aos-delay="150">
+                    <div class="metric-label">Payback</div>
+                    <div class="metric-value">Año 3</div>
+                    <div class="metric-sub">Inversión recuperada</div>
+                </div>
+                <div class="metric-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="metric-label">Punto de Equilibrio</div>
+                    <div class="metric-value">22</div>
+                    <div class="metric-unit">proyectos/año</div>
+                    <div class="metric-sub">≈ 2 proyectos/mes</div>
+                </div>
+                <div class="metric-card" data-aos="zoom-in" data-aos-delay="250">
+                    <div class="metric-label">Margen Contribución</div>
+                    <div class="metric-value">71.7%</div>
+                    <div class="metric-sub">Consultoría especializada</div>
+                </div>
+            </div>
+
+            <!-- Revenue Projection Chart -->
+            <div class="projection-section">
+                <h3 class="projection-title">Proyección de Ingresos a 5 Años</h3>
+                <div class="chart-container">
+                    <div class="chart-bars">
+                        <div class="chart-bar-group" data-aos="fade-up">
+                            <div class="chart-bar" style="--bar-height: 15%;">
+                                <span class="bar-value">$457M</span>
+                            </div>
+                            <span class="bar-label">2026</span>
+                            <span class="bar-projects">12 proyectos</span>
+                        </div>
+                        <div class="chart-bar-group" data-aos="fade-up" data-aos-delay="100">
+                            <div class="chart-bar" style="--bar-height: 35%;">
+                                <span class="bar-value">$1.068M</span>
+                            </div>
+                            <span class="bar-label">2027</span>
+                            <span class="bar-projects">28 proyectos</span>
+                        </div>
+                        <div class="chart-bar-group" data-aos="fade-up" data-aos-delay="200">
+                            <div class="chart-bar" style="--bar-height: 56%;">
+                                <span class="bar-value">$1.716M</span>
+                            </div>
+                            <span class="bar-label">2028</span>
+                            <span class="bar-projects">45 proyectos</span>
+                        </div>
+                        <div class="chart-bar-group" data-aos="fade-up" data-aos-delay="300">
+                            <div class="chart-bar" style="--bar-height: 77%;">
+                                <span class="bar-value">$2.364M</span>
+                            </div>
+                            <span class="bar-label">2029</span>
+                            <span class="bar-projects">62 proyectos</span>
+                        </div>
+                        <div class="chart-bar-group" data-aos="fade-up" data-aos-delay="400">
+                            <div class="chart-bar" style="--bar-height: 100%;">
+                                <span class="bar-value">$3.050M</span>
+                            </div>
+                            <span class="bar-label">2030</span>
+                            <span class="bar-projects">80 proyectos</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sensitivity Analysis -->
+            <div class="sensitivity-section">
+                <h3 class="projection-title">Análisis de Sensibilidad</h3>
+                <div class="sensitivity-grid">
+                    <div class="sensitivity-card pessimistic">
+                        <div class="sens-label">Pesimista</div>
+                        <div class="sens-desc">×0.70 proyectos · ×0.90 precios</div>
+                        <div class="sens-roi">ROI: ~280%</div>
+                        <div class="sens-recovery">Inversión recuperada: Año 4-5</div>
+                        <div class="sens-flow">Flujo acumulado: ~+$700M</div>
+                    </div>
+                    <div class="sensitivity-card expected">
+                        <div class="sens-label">Esperado</div>
+                        <div class="sens-desc">×1.00 proyectos · ×1.00 precios</div>
+                        <div class="sens-roi">ROI: ~811%</div>
+                        <div class="sens-recovery">Inversión recuperada: Año 3</div>
+                        <div class="sens-flow">Flujo acumulado: ~+$2.011M</div>
+                    </div>
+                    <div class="sensitivity-card optimistic">
+                        <div class="sens-label">Optimista</div>
+                        <div class="sens-desc">×1.30 proyectos · ×1.10 precios</div>
+                        <div class="sens-roi">ROI: ~1.400%</div>
+                        <div class="sens-recovery">Inversión recuperada: Año 2</div>
+                        <div class="sens-flow">Flujo acumulado: ~+$3.500M</div>
+                    </div>
+                </div>
+                <p class="sensitivity-note">Incluso en el escenario pesimista, DATA-SHIELD recupera la inversión y genera valor positivo.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Roadmap -->
+    <section id="roadmap" class="section roadmap">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Hoja de Ruta</span>
+                <h2 class="section-title">Plan de <span class="gradient-text">ejecución</span></h2>
+                <p class="section-desc">Estrategia de crecimiento de 4 fases: desde la fundación hasta la consolidación regional.</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-line"></div>
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-marker">
+                        <span>Q1</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Fundación & Setup</h3>
+                        <span class="timeline-period">Enero - Marzo 2026</span>
+                        <ul>
+                            <li>Constitución legal SAS</li>
+                            <li>Setup infraestructura (AWS, dbt, herramientas)</li>
+                            <li>Certificaciones iniciales del equipo fundador</li>
+                            <li>Sitio web profesional y branding</li>
+                            <li>Primeros contactos y pipeline de ventas</li>
+                        </ul>
+                        <div class="timeline-metric">Ingresos: $0 · Inversión Inicial: $248M COP</div>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-marker">
+                        <span>Q2</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Primer Cliente & Validación</h3>
+                        <span class="timeline-period">Abril - Junio 2026</span>
+                        <ul>
+                            <li>Primer cliente real (proyecto piloto)</li>
+                            <li>Validación del modelo de entrega</li>
+                            <li>Ajuste de procesos y metodologías</li>
+                            <li>Inicio de marketing activo (LinkedIn Ads, eventos)</li>
+                        </ul>
+                        <div class="timeline-metric">Equipo: 3 personas + freelancers</div>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-marker active">
+                        <span>Q3</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Breakeven & Escalamiento</h3>
+                        <span class="timeline-period">Julio - Septiembre 2026</span>
+                        <ul>
+                            <li>Alcanzar punto de equilibrio: 5 clientes activos</li>
+                            <li>Red de freelancers especializados consolidada</li>
+                            <li>Primeros casos de éxito documentados</li>
+                            <li>Exploración de mercado Chile</li>
+                        </ul>
+                        <div class="timeline-metric">Breakeven: ~22 proyectos/año (2/mes)</div>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-marker">
+                        <span>Q4</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Expansión LATAM</h3>
+                        <span class="timeline-period">Octubre - Diciembre 2026</span>
+                        <ul>
+                            <li>Operación Chile iniciada</li>
+                            <li>12 proyectos completados en el año</li>
+                            <li>Consolidación brand awareness regional</li>
+                            <li>Preparación para crecimiento Año 2</li>
+                        </ul>
+                        <div class="timeline-metric">Año 5: $3.050M COP · 2-3 países</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <span class="section-tag">Contacto</span>
+                    <h2 class="section-title">¿Listo para <span class="gradient-text">proteger</span> tu negocio?</h2>
+                    <p>Agenda una consulta inicial gratuita. Evaluaremos tu situación regulatoria y te mostraremos un roadmap de cumplimiento personalizado.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="2"/><path d="M3 7l9 6 9-6" stroke="currentColor" stroke-width="2"/></svg>
+                            <span>contacto@data-shield.co</span>
+                        </div>
+                        <div class="contact-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="2"/></svg>
+                            <span>Medellín, Colombia</span>
+                        </div>
+                        <div class="contact-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" stroke="currentColor" stroke-width="2"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10A15.3 15.3 0 0112 2z" stroke="currentColor" stroke-width="2"/></svg>
+                            <span>Operaciones en Colombia, Chile y LATAM</span>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Nombre completo</label>
+                        <input type="text" id="name" name="name" required placeholder="Tu nombre">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" id="email" name="email" required placeholder="correo@empresa.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="company">Empresa</label>
+                        <input type="text" id="company" name="company" placeholder="Nombre de tu empresa">
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Servicio de interés</label>
+                        <select id="service" name="service">
+                            <option value="">Selecciona un servicio</option>
+                            <option value="compliance">AI Compliance 360°</option>
+                            <option value="datagov">DataGov ProAI</option>
+                            <option value="regulaia">RegulaIA Readiness</option>
+                            <option value="databreach">DataBreach ResponsePro</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensaje</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Cuéntanos sobre tu necesidad..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+                        <span>Enviar solicitud</span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="nav-logo">
+                        <div class="logo-icon">
+                            <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+                                <path d="M16 2L28 9V23L16 30L4 23V9L16 2Z" stroke="url(#footerGrad)" stroke-width="2" fill="none"/>
+                                <circle cx="16" cy="16" r="3" fill="url(#footerGrad)"/>
+                                <defs>
+                                    <linearGradient id="footerGrad" x1="4" y1="2" x2="28" y2="30">
+                                        <stop offset="0%" stop-color="#00F0FF"/>
+                                        <stop offset="100%" stop-color="#7B61FF"/>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                        <span class="logo-text">DATA-SHIELD</span>
+                    </div>
+                    <p>Tu dato seguro, tu negocio protegido.</p>
+                </div>
+                <div class="footer-links-group">
+                    <h4>Servicios</h4>
+                    <a href="#services">AI Compliance 360°</a>
+                    <a href="#services">DataGov ProAI</a>
+                    <a href="#services">RegulaIA Readiness</a>
+                    <a href="#services">DataBreach ResponsePro</a>
+                </div>
+                <div class="footer-links-group">
+                    <h4>Empresa</h4>
+                    <a href="#about">Nosotros</a>
+                    <a href="#team">Equipo</a>
+                    <a href="#roadmap">Roadmap</a>
+                    <a href="#contact">Contacto</a>
+                </div>
+                <div class="footer-links-group">
+                    <h4>Regulaciones</h4>
+                    <a href="#">GDPR / LGPD</a>
+                    <a href="#">Ley 1581 Colombia</a>
+                    <a href="#">ISO/IEC 42001</a>
+                    <a href="#">AI Act EU</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 DATA-SHIELD. Todos los derechos reservados.</p>
+                <p>Consultora de Gobernanza IA & Seguridad de Datos para LATAM</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
