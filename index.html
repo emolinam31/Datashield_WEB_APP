@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DATA-SHIELD | Gobernanza de IA & Seguridad de Datos para LATAM</title>
-    <meta name="description" content="DATA-SHIELD: Consultora especializada en gobernanza de inteligencia artificial, cumplimiento regulatorio y seguridad de datos para empresas latinoamericanas. Protege tu negocio, adopta IA responsable.">
+    <title>CORE-GUARD | Gobernanza de IA & Seguridad de Datos para LATAM</title>
+    <meta name="description"
+        content="CORE-GUARD: Consultora especializada en gobernanza de inteligencia artificial, cumplimiento regulatorio y seguridad de datos para empresas latinoamericanas. Protege tu negocio, adopta IA responsable.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <!-- Particle Canvas Background -->
     <canvas id="particleCanvas"></canvas>
@@ -20,18 +25,19 @@
             <a href="#hero" class="nav-logo">
                 <div class="logo-icon">
                     <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                        <path d="M16 2L28 9V23L16 30L4 23V9L16 2Z" stroke="url(#logoGrad)" stroke-width="2" fill="none"/>
-                        <path d="M16 8L22 11.5V18.5L16 22L10 18.5V11.5L16 8Z" fill="url(#logoGrad)" opacity="0.3"/>
-                        <circle cx="16" cy="16" r="3" fill="url(#logoGrad)"/>
+                        <path d="M16 2L28 9V23L16 30L4 23V9L16 2Z" stroke="url(#logoGrad)" stroke-width="2"
+                            fill="none" />
+                        <path d="M16 8L22 11.5V18.5L16 22L10 18.5V11.5L16 8Z" fill="url(#logoGrad)" opacity="0.3" />
+                        <circle cx="16" cy="16" r="3" fill="url(#logoGrad)" />
                         <defs>
                             <linearGradient id="logoGrad" x1="4" y1="2" x2="28" y2="30">
-                                <stop offset="0%" stop-color="#00F0FF"/>
-                                <stop offset="100%" stop-color="#7B61FF"/>
+                                <stop offset="0%" stop-color="#00F0FF" />
+                                <stop offset="100%" stop-color="#7B61FF" />
                             </linearGradient>
                         </defs>
                     </svg>
                 </div>
-                <span class="logo-text">DATA-SHIELD</span>
+                <span class="logo-text">CORE-GUARD</span>
             </a>
             <div class="nav-links" id="navLinks">
                 <a href="#about" class="nav-link">Nosotros</a>
@@ -61,15 +67,16 @@
                 tu negocio <span class="gradient-text">protegido</span>.
             </h1>
             <p class="hero-subtitle">
-                Ayudamos a empresas latinoamericanas a adoptar IA de forma responsable y 
-                cumplir con las nuevas regulaciones de privacidad, evitando sanciones millonarias 
+                Ayudamos a empresas latinoamericanas a adoptar IA de forma responsable y
+                cumplir con las nuevas regulaciones de privacidad, evitando sanciones millonarias
                 y construyendo confianza con sus clientes.
             </p>
             <div class="hero-actions">
                 <a href="#contact" class="btn btn-primary">
                     <span>Agenda una consulta</span>
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                        <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                 </a>
                 <a href="#services" class="btn btn-secondary">Explorar servicios</a>
@@ -98,13 +105,14 @@
                 <div class="shield-ring ring-3"></div>
                 <div class="shield-core">
                     <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
-                        <path d="M40 8L68 22V46C68 58 56 68 40 74C24 68 12 58 12 46V22L40 8Z" stroke="url(#shieldGrad)" stroke-width="2" fill="url(#shieldGrad)" fill-opacity="0.1"/>
-                        <path d="M40 24L32 40H38V52L48 36H42L40 24Z" fill="url(#shieldGrad)"/>
+                        <path d="M40 8L68 22V46C68 58 56 68 40 74C24 68 12 58 12 46V22L40 8Z" stroke="url(#shieldGrad)"
+                            stroke-width="2" fill="url(#shieldGrad)" fill-opacity="0.1" />
+                        <path d="M40 24L32 40H38V52L48 36H42L40 24Z" fill="url(#shieldGrad)" />
                         <defs>
                             <linearGradient id="shieldGrad" x1="12" y1="8" x2="68" y2="74">
-                                <stop offset="0%" stop-color="#00F0FF"/>
-                                <stop offset="50%" stop-color="#7B61FF"/>
-                                <stop offset="100%" stop-color="#00F0FF"/>
+                                <stop offset="0%" stop-color="#00F0FF" />
+                                <stop offset="50%" stop-color="#7B61FF" />
+                                <stop offset="100%" stop-color="#00F0FF" />
                             </linearGradient>
                         </defs>
                     </svg>
@@ -122,45 +130,50 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">El Problema</span>
-                <h2 class="section-title">¿Por qué necesitas <span class="gradient-text">DATA-SHIELD</span>?</h2>
-                <p class="section-desc">En 2024, la SIC gestionó más de 10,000 reclamos en protección de datos. Las empresas que ignoran la gobernanza de IA enfrentan riesgos existenciales.</p>
+                <h2 class="section-title">¿Por qué necesitas <span class="gradient-text">CORE-GUARD</span>?</h2>
+                <p class="section-desc">En 2024, la SIC gestionó más de 10,000 reclamos en protección de datos. Las
+                    empresas que ignoran la gobernanza de IA enfrentan riesgos existenciales.</p>
             </div>
             <div class="problem-grid">
                 <div class="problem-card" data-aos="fade-up">
                     <div class="problem-icon">
                         <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-                            <rect x="4" y="14" width="32" height="22" rx="3" stroke="#FF4D6A" stroke-width="2"/>
-                            <path d="M4 20h32" stroke="#FF4D6A" stroke-width="2"/>
-                            <circle cx="10" cy="26" r="2" fill="#FF4D6A"/>
-                            <path d="M20 4L22 10H18L20 4Z" fill="#FF4D6A"/>
+                            <rect x="4" y="14" width="32" height="22" rx="3" stroke="#FF4D6A" stroke-width="2" />
+                            <path d="M4 20h32" stroke="#FF4D6A" stroke-width="2" />
+                            <circle cx="10" cy="26" r="2" fill="#FF4D6A" />
+                            <path d="M20 4L22 10H18L20 4Z" fill="#FF4D6A" />
                         </svg>
                     </div>
                     <h3>Me van a multar y no sé cómo evitarlo</h3>
-                    <p>Una brecha impacta el flujo de caja, el EBITDA y la continuidad del negocio. La ciberseguridad ya es tema de CFO, no solo de TI.</p>
+                    <p>Una brecha impacta el flujo de caja, el EBITDA y la continuidad del negocio. La ciberseguridad ya
+                        es tema de CFO, no solo de TI.</p>
                     <span class="problem-stat">$5.000M+ COP en multas potenciales</span>
                 </div>
                 <div class="problem-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="problem-icon">
                         <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-                            <circle cx="20" cy="16" r="8" stroke="#FFAA33" stroke-width="2"/>
-                            <path d="M8 36c0-6.6 5.4-12 12-12s12 5.4 12 12" stroke="#FFAA33" stroke-width="2"/>
-                            <path d="M18 14l4 4M22 14l-4 4" stroke="#FFAA33" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="20" cy="16" r="8" stroke="#FFAA33" stroke-width="2" />
+                            <path d="M8 36c0-6.6 5.4-12 12-12s12 5.4 12 12" stroke="#FFAA33" stroke-width="2" />
+                            <path d="M18 14l4 4M22 14l-4 4" stroke="#FFAA33" stroke-width="2" stroke-linecap="round" />
                         </svg>
                     </div>
                     <h3>Tengo IA en producción sin saber si es legal</h3>
-                    <p>2 de cada 3 Fintech en Colombia implementan IA. Desde 2025, la SIC propuso lineamientos específicos que prohíben prácticas invasivas.</p>
+                    <p>2 de cada 3 Fintech en Colombia implementan IA. Desde 2025, la SIC propuso lineamientos
+                        específicos que prohíben prácticas invasivas.</p>
                     <span class="problem-stat">67% de Fintechs sin compliance IA</span>
                 </div>
                 <div class="problem-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="problem-icon">
                         <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-                            <path d="M20 4v16l8 8" stroke="#00F0FF" stroke-width="2" stroke-linecap="round"/>
-                            <circle cx="20" cy="20" r="16" stroke="#00F0FF" stroke-width="2"/>
-                            <path d="M20 8v4M20 28v4M8 20h4M28 20h4" stroke="#00F0FF" stroke-width="1.5" stroke-linecap="round"/>
+                            <path d="M20 4v16l8 8" stroke="#00F0FF" stroke-width="2" stroke-linecap="round" />
+                            <circle cx="20" cy="20" r="16" stroke="#00F0FF" stroke-width="2" />
+                            <path d="M20 8v4M20 28v4M8 20h4M28 20h4" stroke="#00F0FF" stroke-width="1.5"
+                                stroke-linecap="round" />
                         </svg>
                     </div>
                     <h3>Sufrí una brecha y no sé qué hacer</h3>
-                    <p>77,866 denuncias por delitos informáticos en 2024 (+23% vs 2023). La Ley 2300 exige notificar brechas en 72 horas.</p>
+                    <p>77,866 denuncias por delitos informáticos en 2024 (+23% vs 2023). La Ley 2300 exige notificar
+                        brechas en 72 horas.</p>
                     <span class="problem-stat">36 mil millones de intentos de ataque</span>
                 </div>
             </div>
@@ -168,8 +181,8 @@
             <div class="mission-block">
                 <div class="mission-label">Nuestra Misión</div>
                 <blockquote class="mission-quote">
-                    "Ayudar a empresas latinoamericanas a adoptar inteligencia artificial de forma responsable, 
-                    construyendo marcos de gobernanza de datos que garantizan cumplimiento normativo, minimizan 
+                    "Ayudar a empresas latinoamericanas a adoptar inteligencia artificial de forma responsable,
+                    construyendo marcos de gobernanza de datos que garantizan cumplimiento normativo, minimizan
                     riesgos legales y generan confianza sostenible con sus clientes."
                 </blockquote>
             </div>
@@ -182,7 +195,8 @@
             <div class="section-header">
                 <span class="section-tag">Portafolio</span>
                 <h2 class="section-title">Nuestros <span class="gradient-text">Servicios</span></h2>
-                <p class="section-desc">Soluciones especializadas en gobernanza de IA, cumplimiento regulatorio y seguridad de datos para LATAM.</p>
+                <p class="section-desc">Soluciones especializadas en gobernanza de IA, cumplimiento regulatorio y
+                    seguridad de datos para LATAM.</p>
             </div>
             <div class="services-grid">
                 <!-- Service 1 -->
@@ -191,15 +205,22 @@
                     <div class="service-icon-wrapper">
                         <div class="service-icon">
                             <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                                <path d="M24 6L40 15V33L24 42L8 33V15L24 6Z" stroke="url(#s1)" stroke-width="2" fill="url(#s1)" fill-opacity="0.08"/>
-                                <path d="M24 18v6l5 3" stroke="url(#s1)" stroke-width="2" stroke-linecap="round"/>
-                                <circle cx="24" cy="24" r="8" stroke="url(#s1)" stroke-width="1.5"/>
-                                <defs><linearGradient id="s1" x1="8" y1="6" x2="40" y2="42"><stop stop-color="#00F0FF"/><stop offset="1" stop-color="#7B61FF"/></linearGradient></defs>
+                                <path d="M24 6L40 15V33L24 42L8 33V15L24 6Z" stroke="url(#s1)" stroke-width="2"
+                                    fill="url(#s1)" fill-opacity="0.08" />
+                                <path d="M24 18v6l5 3" stroke="url(#s1)" stroke-width="2" stroke-linecap="round" />
+                                <circle cx="24" cy="24" r="8" stroke="url(#s1)" stroke-width="1.5" />
+                                <defs>
+                                    <linearGradient id="s1" x1="8" y1="6" x2="40" y2="42">
+                                        <stop stop-color="#00F0FF" />
+                                        <stop offset="1" stop-color="#7B61FF" />
+                                    </linearGradient>
+                                </defs>
                             </svg>
                         </div>
                     </div>
                     <h3 class="service-name">AI Compliance 360°</h3>
-                    <p class="service-desc">Auditoría exhaustiva de cumplimiento regulatorio para sistemas de IA bajo marcos GDPR, LGPD y regulaciones emergentes de LATAM.</p>
+                    <p class="service-desc">Auditoría exhaustiva de cumplimiento regulatorio para sistemas de IA bajo
+                        marcos GDPR, LGPD y regulaciones emergentes de LATAM.</p>
                     <ul class="service-features">
                         <li>Evaluación bajo marcos regulatorios de Brasil, Chile, Perú, Colombia</li>
                         <li>Identificación de riesgos algorítmicos (sesgo, discriminación, transparencia)</li>
@@ -230,16 +251,26 @@
                     <div class="service-icon-wrapper">
                         <div class="service-icon">
                             <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                                <rect x="8" y="12" width="32" height="24" rx="4" stroke="url(#s2)" stroke-width="2" fill="url(#s2)" fill-opacity="0.08"/>
-                                <path d="M16 22h16M16 28h10" stroke="url(#s2)" stroke-width="2" stroke-linecap="round"/>
-                                <circle cx="36" cy="12" r="6" fill="url(#s2)" fill-opacity="0.3" stroke="url(#s2)" stroke-width="1.5"/>
-                                <path d="M34 12l2 2 3-4" stroke="url(#s2)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                <defs><linearGradient id="s2" x1="8" y1="6" x2="44" y2="42"><stop stop-color="#7B61FF"/><stop offset="1" stop-color="#00F0FF"/></linearGradient></defs>
+                                <rect x="8" y="12" width="32" height="24" rx="4" stroke="url(#s2)" stroke-width="2"
+                                    fill="url(#s2)" fill-opacity="0.08" />
+                                <path d="M16 22h16M16 28h10" stroke="url(#s2)" stroke-width="2"
+                                    stroke-linecap="round" />
+                                <circle cx="36" cy="12" r="6" fill="url(#s2)" fill-opacity="0.3" stroke="url(#s2)"
+                                    stroke-width="1.5" />
+                                <path d="M34 12l2 2 3-4" stroke="url(#s2)" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <defs>
+                                    <linearGradient id="s2" x1="8" y1="6" x2="44" y2="42">
+                                        <stop stop-color="#7B61FF" />
+                                        <stop offset="1" stop-color="#00F0FF" />
+                                    </linearGradient>
+                                </defs>
                             </svg>
                         </div>
                     </div>
                     <h3 class="service-name">DataGov ProAI</h3>
-                    <p class="service-desc">Implementación de frameworks de gobernanza de datos diseñados específicamente para alimentar sistemas de IA/ML con calidad empresarial.</p>
+                    <p class="service-desc">Implementación de frameworks de gobernanza de datos diseñados
+                        específicamente para alimentar sistemas de IA/ML con calidad empresarial.</p>
                     <ul class="service-features">
                         <li>Frameworks de calidad de datos para modelos de ML (great_expectations, dbt tests)</li>
                         <li>Definición de roles: "Data Owners" por área de negocio</li>
@@ -270,14 +301,22 @@
                     <div class="service-icon-wrapper">
                         <div class="service-icon">
                             <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                                <path d="M24 4l4 8h8l-6 5 2 8-8-5-8 5 2-8-6-5h8l4-8z" stroke="url(#s3)" stroke-width="2" fill="url(#s3)" fill-opacity="0.08"/>
-                                <path d="M12 36h24M16 42h16" stroke="url(#s3)" stroke-width="2" stroke-linecap="round"/>
-                                <defs><linearGradient id="s3" x1="6" y1="4" x2="42" y2="44"><stop stop-color="#00F0FF"/><stop offset="1" stop-color="#00D68F"/></linearGradient></defs>
+                                <path d="M24 4l4 8h8l-6 5 2 8-8-5-8 5 2-8-6-5h8l4-8z" stroke="url(#s3)" stroke-width="2"
+                                    fill="url(#s3)" fill-opacity="0.08" />
+                                <path d="M12 36h24M16 42h16" stroke="url(#s3)" stroke-width="2"
+                                    stroke-linecap="round" />
+                                <defs>
+                                    <linearGradient id="s3" x1="6" y1="4" x2="42" y2="44">
+                                        <stop stop-color="#00F0FF" />
+                                        <stop offset="1" stop-color="#00D68F" />
+                                    </linearGradient>
+                                </defs>
                             </svg>
                         </div>
                     </div>
                     <h3 class="service-name">RegulaIA Readiness</h3>
-                    <p class="service-desc">Preparación estratégica para el cumplimiento de regulaciones de IA emergentes en LATAM y Europa, anticipando requisitos futuros.</p>
+                    <p class="service-desc">Preparación estratégica para el cumplimiento de regulaciones de IA
+                        emergentes en LATAM y Europa, anticipando requisitos futuros.</p>
                     <ul class="service-features">
                         <li>Asesoría en marcos de riesgo: Prohibido / Alto Riesgo / Bajo Riesgo</li>
                         <li>Clasificación de sistemas según propuestas legislativas regionales</li>
@@ -308,14 +347,22 @@
                     <div class="service-icon-wrapper">
                         <div class="service-icon">
                             <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                                <path d="M24 8L36 14V26C36 32 30 38 24 40C18 38 12 32 12 26V14L24 8Z" stroke="url(#s4)" stroke-width="2" fill="url(#s4)" fill-opacity="0.08"/>
-                                <path d="M20 24l3 3 5-6" stroke="url(#s4)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                <defs><linearGradient id="s4" x1="12" y1="8" x2="36" y2="40"><stop stop-color="#FF4D6A"/><stop offset="1" stop-color="#FFAA33"/></linearGradient></defs>
+                                <path d="M24 8L36 14V26C36 32 30 38 24 40C18 38 12 32 12 26V14L24 8Z" stroke="url(#s4)"
+                                    stroke-width="2" fill="url(#s4)" fill-opacity="0.08" />
+                                <path d="M20 24l3 3 5-6" stroke="url(#s4)" stroke-width="2.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <defs>
+                                    <linearGradient id="s4" x1="12" y1="8" x2="36" y2="40">
+                                        <stop stop-color="#FF4D6A" />
+                                        <stop offset="1" stop-color="#FFAA33" />
+                                    </linearGradient>
+                                </defs>
                             </svg>
                         </div>
                     </div>
                     <h3 class="service-name">DataBreach ResponsePro</h3>
-                    <p class="service-desc">Servicio de respuesta rápida ante incidentes y brechas de datos, con protocolos de notificación y contención según regulaciones LATAM.</p>
+                    <p class="service-desc">Servicio de respuesta rápida ante incidentes y brechas de datos, con
+                        protocolos de notificación y contención según regulaciones LATAM.</p>
                     <ul class="service-features">
                         <li>Protocolos de notificación según LGPD, Ley 21.096, Ley 29733, Ley 1581</li>
                         <li>Evaluación forense del alcance de la brecha</li>
@@ -347,28 +394,33 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">Diferenciador</span>
-                <h2 class="section-title">¿Qué hacemos que una <span class="gradient-text">IA gratuita</span> no puede?</h2>
+                <h2 class="section-title">¿Qué hacemos que una <span class="gradient-text">IA gratuita</span> no puede?
+                </h2>
             </div>
             <div class="diff-grid">
                 <div class="diff-card">
                     <div class="diff-number">01</div>
                     <h3>Auditoría Técnico-Legal Híbrida</h3>
-                    <p>Revisamos tu código en producción, detectamos PII sin cifrar, analizamos contratos con proveedores cloud y generamos evidencia admisible ante la SIC.</p>
+                    <p>Revisamos tu código en producción, detectamos PII sin cifrar, analizamos contratos con
+                        proveedores cloud y generamos evidencia admisible ante la SIC.</p>
                 </div>
                 <div class="diff-card">
                     <div class="diff-number">02</div>
                     <h3>Remediación Específica por Sector</h3>
-                    <p>Frameworks de consentimiento para Open Finance, políticas de anonimización para salud HL7 FHIR, arquitecturas de datos compatibles con Ley 2300/2023.</p>
+                    <p>Frameworks de consentimiento para Open Finance, políticas de anonimización para salud HL7 FHIR,
+                        arquitecturas de datos compatibles con Ley 2300/2023.</p>
                 </div>
                 <div class="diff-card">
                     <div class="diff-number">03</div>
                     <h3>Representación Ante Reguladores</h3>
-                    <p>Te acompañamos a reuniones con la SIC, redactamos respuestas formales a requerimientos y negociamos plazos de remediación.</p>
+                    <p>Te acompañamos a reuniones con la SIC, redactamos respuestas formales a requerimientos y
+                        negociamos plazos de remediación.</p>
                 </div>
                 <div class="diff-card">
                     <div class="diff-number">04</div>
                     <h3>Certificación & Monitoreo Continuo</h3>
-                    <p>Certificamos implementaciones con badge "Certified by DATA-SHIELD", ofrecemos respaldo legal en auditorías y monitoreo post-implementación.</p>
+                    <p>Certificamos implementaciones con badge "Certified by CORE-GUARD", ofrecemos respaldo legal en
+                        auditorías y monitoreo post-implementación.</p>
                 </div>
             </div>
         </div>
@@ -386,60 +438,67 @@
                 <div class="industry-card" data-aos="fade-up">
                     <div class="industry-icon">
                         <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                            <rect x="8" y="8" width="32" height="32" rx="6" stroke="#00F0FF" stroke-width="2"/>
-                            <path d="M16 28l4-8 4 4 4-12 4 16" stroke="#00F0FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <rect x="8" y="8" width="32" height="32" rx="6" stroke="#00F0FF" stroke-width="2" />
+                            <path d="M16 28l4-8 4 4 4-12 4 16" stroke="#00F0FF" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
                         </svg>
                     </div>
                     <h3>Fintech & Servicios Financieros</h3>
-                    <p>Altamente regulados y adoptando IA rápidamente. 95 empresas de crédito digital generando +$196 mil millones en ingresos.</p>
+                    <p>Altamente regulados y adoptando IA rápidamente. 95 empresas de crédito digital generando +$196
+                        mil millones en ingresos.</p>
                     <span class="industry-highlight">Sector #1 en ciberataques 2025</span>
                 </div>
                 <div class="industry-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="industry-icon">
                         <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                            <path d="M24 8v8M20 12h8" stroke="#7B61FF" stroke-width="2.5" stroke-linecap="round"/>
-                            <rect x="12" y="20" width="24" height="20" rx="4" stroke="#7B61FF" stroke-width="2"/>
-                            <path d="M20 28h8M20 33h5" stroke="#7B61FF" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M24 8v8M20 12h8" stroke="#7B61FF" stroke-width="2.5" stroke-linecap="round" />
+                            <rect x="12" y="20" width="24" height="20" rx="4" stroke="#7B61FF" stroke-width="2" />
+                            <path d="M20 28h8M20 33h5" stroke="#7B61FF" stroke-width="2" stroke-linecap="round" />
                         </svg>
                     </div>
                     <h3>Salud y Seguros</h3>
-                    <p>Datos ultra sensibles con adopción acelerada de telemedicina. Concentra la mayoría de sanciones SIC.</p>
+                    <p>Datos ultra sensibles con adopción acelerada de telemedicina. Concentra la mayoría de sanciones
+                        SIC.</p>
                     <span class="industry-highlight">Top en sanciones SIC 2023-2024</span>
                 </div>
                 <div class="industry-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="industry-icon">
                         <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                            <path d="M8 40V16l8-8h16l8 8v24" stroke="#00D68F" stroke-width="2"/>
-                            <rect x="18" y="28" width="12" height="12" stroke="#00D68F" stroke-width="2"/>
-                            <path d="M24 12v8" stroke="#00D68F" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M8 40V16l8-8h16l8 8v24" stroke="#00D68F" stroke-width="2" />
+                            <rect x="18" y="28" width="12" height="12" stroke="#00D68F" stroke-width="2" />
+                            <path d="M24 12v8" stroke="#00D68F" stroke-width="2" stroke-linecap="round" />
                         </svg>
                     </div>
                     <h3>Retail y E-commerce</h3>
-                    <p>Explosión de datos de clientes + presión por personalización con IA = riesgo masivo de incumplimiento.</p>
+                    <p>Explosión de datos de clientes + presión por personalización con IA = riesgo masivo de
+                        incumplimiento.</p>
                     <span class="industry-highlight">Top 5 sectores en ciberataques</span>
                 </div>
                 <div class="industry-card" data-aos="fade-up" data-aos-delay="300">
                     <div class="industry-icon">
                         <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                            <rect x="10" y="18" width="28" height="20" rx="3" stroke="#FFAA33" stroke-width="2"/>
-                            <path d="M18 18V14a6 6 0 0 1 12 0v4" stroke="#FFAA33" stroke-width="2"/>
-                            <circle cx="24" cy="28" r="3" fill="#FFAA33"/>
-                            <path d="M24 31v4" stroke="#FFAA33" stroke-width="2" stroke-linecap="round"/>
+                            <rect x="10" y="18" width="28" height="20" rx="3" stroke="#FFAA33" stroke-width="2" />
+                            <path d="M18 18V14a6 6 0 0 1 12 0v4" stroke="#FFAA33" stroke-width="2" />
+                            <circle cx="24" cy="28" r="3" fill="#FFAA33" />
+                            <path d="M24 31v4" stroke="#FFAA33" stroke-width="2" stroke-linecap="round" />
                         </svg>
                     </div>
                     <h3>Gobierno y Sector Público</h3>
-                    <p>Solo el 25% de los países de la región tienen implementado un marco de calidad de datos según World Bank.</p>
+                    <p>Solo el 25% de los países de la región tienen implementado un marco de calidad de datos según
+                        World Bank.</p>
                     <span class="industry-highlight">75% sin marco de calidad de datos</span>
                 </div>
                 <div class="industry-card" data-aos="fade-up" data-aos-delay="400">
                     <div class="industry-icon">
                         <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                            <path d="M24 8L8 20v20h32V20L24 8Z" stroke="#FF4D6A" stroke-width="2"/>
-                            <path d="M16 28l4-4 4 4 4-8 4 8" stroke="#FF4D6A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M24 8L8 20v20h32V20L24 8Z" stroke="#FF4D6A" stroke-width="2" />
+                            <path d="M16 28l4-4 4 4 4-8 4 8" stroke="#FF4D6A" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
                         </svg>
                     </div>
                     <h3>Minería y Energía</h3>
-                    <p>Solo el 26% tiene gobernanza de datos bien implementada. Sector crítico con datos operacionales masivos.</p>
+                    <p>Solo el 26% tiene gobernanza de datos bien implementada. Sector crítico con datos operacionales
+                        masivos.</p>
                     <span class="industry-highlight">74% sin gobernanza implementada</span>
                 </div>
             </div>
@@ -451,12 +510,15 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">Ventaja Competitiva</span>
-                <h2 class="section-title">¿Por qué elegir <span class="gradient-text">DATA-SHIELD</span>?</h2>
+                <h2 class="section-title">¿Por qué elegir <span class="gradient-text">CORE-GUARD</span>?</h2>
             </div>
             <div class="advantages-grid">
                 <div class="advantage-item" data-aos="fade-right">
                     <div class="adv-icon">
-                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 3L17 10H24L18.5 14.5L20.5 22L14 17.5L7.5 22L9.5 14.5L4 10H11L14 3Z" fill="#FF4D6A"/></svg>
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                            <path d="M14 3L17 10H24L18.5 14.5L20.5 22L14 17.5L7.5 22L9.5 14.5L4 10H11L14 3Z"
+                                fill="#FF4D6A" />
+                        </svg>
                     </div>
                     <div class="adv-content">
                         <h3>Urgencia Regulatoria</h3>
@@ -465,47 +527,69 @@
                 </div>
                 <div class="advantage-item" data-aos="fade-right" data-aos-delay="100">
                     <div class="adv-icon">
-                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="10" stroke="#00F0FF" stroke-width="2"/><path d="M10 14h8M14 10v8" stroke="#00F0FF" stroke-width="2" stroke-linecap="round"/></svg>
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                            <circle cx="14" cy="14" r="10" stroke="#00F0FF" stroke-width="2" />
+                            <path d="M10 14h8M14 10v8" stroke="#00F0FF" stroke-width="2" stroke-linecap="round" />
+                        </svg>
                     </div>
                     <div class="adv-content">
                         <h3>Diferenciación AI-First</h3>
-                        <p>La mayoría de consultoras tradicionales no entienden IA. Nosotros nacimos desde la intersección IA + Legal + Datos.</p>
+                        <p>La mayoría de consultoras tradicionales no entienden IA. Nosotros nacimos desde la
+                            intersección IA + Legal + Datos.</p>
                     </div>
                 </div>
                 <div class="advantage-item" data-aos="fade-right" data-aos-delay="200">
                     <div class="adv-icon">
-                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="4" y="4" width="20" height="20" rx="4" stroke="#7B61FF" stroke-width="2"/><path d="M10 14l3 3 5-6" stroke="#7B61FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                            <rect x="4" y="4" width="20" height="20" rx="4" stroke="#7B61FF" stroke-width="2" />
+                            <path d="M10 14l3 3 5-6" stroke="#7B61FF" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
                     </div>
                     <div class="adv-content">
                         <h3>Mercado Desatendido</h3>
-                        <p>El 96% de los sistemas de información gerencial en la región se usan exclusivamente para análisis descriptivo.</p>
+                        <p>El 96% de los sistemas de información gerencial en la región se usan exclusivamente para
+                            análisis descriptivo.</p>
                     </div>
                 </div>
                 <div class="advantage-item" data-aos="fade-right" data-aos-delay="300">
                     <div class="adv-icon">
-                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 4v20M4 14h20" stroke="#00D68F" stroke-width="2" stroke-linecap="round"/><circle cx="14" cy="14" r="4" fill="#00D68F" fill-opacity="0.3"/></svg>
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                            <path d="M14 4v20M4 14h20" stroke="#00D68F" stroke-width="2" stroke-linecap="round" />
+                            <circle cx="14" cy="14" r="4" fill="#00D68F" fill-opacity="0.3" />
+                        </svg>
                     </div>
                     <div class="adv-content">
                         <h3>Recurrencia</h3>
-                        <p>Mantenimiento continuo, auditorías periódicas y actualización regulatoria generan ingresos recurrentes.</p>
+                        <p>Mantenimiento continuo, auditorías periódicas y actualización regulatoria generan ingresos
+                            recurrentes.</p>
                     </div>
                 </div>
                 <div class="advantage-item" data-aos="fade-right" data-aos-delay="400">
                     <div class="adv-icon">
-                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 4L24 10v8L14 24 4 18V10L14 4Z" stroke="#FFAA33" stroke-width="2"/><path d="M14 10v8" stroke="#FFAA33" stroke-width="2" stroke-linecap="round"/><circle cx="14" cy="22" r="1.5" fill="#FFAA33"/></svg>
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                            <path d="M14 4L24 10v8L14 24 4 18V10L14 4Z" stroke="#FFAA33" stroke-width="2" />
+                            <path d="M14 10v8" stroke="#FFAA33" stroke-width="2" stroke-linecap="round" />
+                            <circle cx="14" cy="22" r="1.5" fill="#FFAA33" />
+                        </svg>
                     </div>
                     <div class="adv-content">
                         <h3>Alto Valor Percibido</h3>
-                        <p>Evitar multas millonarias justifica fácilmente los honorarios. Una consultoría de $50M-$200M COP vs multas de $5.000M+ COP.</p>
+                        <p>Evitar multas millonarias justifica fácilmente los honorarios. Una consultoría de $50M-$200M
+                            COP vs multas de $5.000M+ COP.</p>
                     </div>
                 </div>
                 <div class="advantage-item" data-aos="fade-right" data-aos-delay="500">
                     <div class="adv-icon">
-                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="6" y="12" width="16" height="12" rx="2" stroke="#FF4D6A" stroke-width="2"/><path d="M10 12V9a4 4 0 118 0v3" stroke="#FF4D6A" stroke-width="2"/></svg>
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                            <rect x="6" y="12" width="16" height="12" rx="2" stroke="#FF4D6A" stroke-width="2" />
+                            <path d="M10 12V9a4 4 0 118 0v3" stroke="#FF4D6A" stroke-width="2" />
+                        </svg>
                     </div>
                     <div class="adv-content">
                         <h3>Barrera de Entrada Técnica</h3>
-                        <p>Requiere conocimiento especializado en IA + Legal + Datos. Combinación rara y difícil de replicar.</p>
+                        <p>Requiere conocimiento especializado en IA + Legal + Datos. Combinación rara y difícil de
+                            replicar.</p>
                     </div>
                 </div>
             </div>
@@ -518,7 +602,8 @@
             <div class="section-header">
                 <span class="section-tag">Equipo Fundador</span>
                 <h2 class="section-title">Quiénes <span class="gradient-text">somos</span></h2>
-                <p class="section-desc">Un equipo multidisciplinario con expertise en IA, gobernanza de datos y compliance regulatorio.</p>
+                <p class="section-desc">Un equipo multidisciplinario con expertise en IA, gobernanza de datos y
+                    compliance regulatorio.</p>
             </div>
             <div class="team-grid">
                 <div class="team-card" data-aos="fade-up">
@@ -528,7 +613,8 @@
                     </div>
                     <h3>Esteban Molina</h3>
                     <span class="team-role">Director General (CEO)</span>
-                    <p class="team-desc">Liderazgo estratégico, visión de negocio y relaciones con clientes. Especialista en arquitectura de datos y soluciones de IA.</p>
+                    <p class="team-desc">Liderazgo estratégico, visión de negocio y relaciones con clientes.
+                        Especialista en arquitectura de datos y soluciones de IA.</p>
                     <div class="team-certs">
                         <span>CDMP</span>
                         <span>ISO 42001</span>
@@ -542,7 +628,8 @@
                     </div>
                     <h3>Miguel Villegas</h3>
                     <span class="team-role">Arquitecto de Datos</span>
-                    <p class="team-desc">Diseño e implementación de frameworks de gobernanza de datos empresariales. Experto en dbt, SQL avanzado y pipelines de ML.</p>
+                    <p class="team-desc">Diseño e implementación de frameworks de gobernanza de datos empresariales.
+                        Experto en dbt, SQL avanzado y pipelines de ML.</p>
                     <div class="team-certs">
                         <span>CDMP</span>
                         <span>DAMA-DMBOK</span>
@@ -556,7 +643,8 @@
                     </div>
                     <h3>Felipe Castro</h3>
                     <span class="team-role">Especialista Legal-Compliance</span>
-                    <p class="team-desc">Navegación regulatoria en frameworks de IA para LATAM. Experto en GDPR, LGPD, Ley 1581 y regulaciones emergentes.</p>
+                    <p class="team-desc">Navegación regulatoria en frameworks de IA para LATAM. Experto en GDPR, LGPD,
+                        Ley 1581 y regulaciones emergentes.</p>
                     <div class="team-certs">
                         <span>CIPP/E</span>
                         <span>LGPD/GDPR</span>
@@ -566,7 +654,9 @@
             </div>
             <div class="team-model">
                 <div class="model-badge">Modelo Híbrido</div>
-                <p>Equipo core fijo de 3 fundadores + red de freelancers especializados que se contratan por proyecto. Este modelo permite escalar de 12 a 80 proyectos anuales mientras los costos fijos crecen solo ×1.6.</p>
+                <p>Equipo core fijo de 3 fundadores + red de freelancers especializados que se contratan por proyecto.
+                    Este modelo permite escalar de 12 a 80 proyectos anuales mientras los costos fijos crecen solo ×1.6.
+                </p>
             </div>
         </div>
     </section>
@@ -577,7 +667,8 @@
             <div class="section-header">
                 <span class="section-tag">Proyección Financiera</span>
                 <h2 class="section-title">Métricas <span class="gradient-text">clave</span></h2>
-                <p class="section-desc">Modelo financiero validado con proyección a 5 años y retorno de inversión comprobado.</p>
+                <p class="section-desc">Modelo financiero validado con proyección a 5 años y retorno de inversión
+                    comprobado.</p>
             </div>
             <div class="metrics-showcase">
                 <div class="metric-card metric-featured" data-aos="zoom-in">
@@ -684,7 +775,8 @@
                         <div class="sens-flow">Flujo acumulado: ~+$3.500M</div>
                     </div>
                 </div>
-                <p class="sensitivity-note">Incluso en el escenario pesimista, DATA-SHIELD recupera la inversión y genera valor positivo.</p>
+                <p class="sensitivity-note">Incluso en el escenario pesimista, CORE-GUARD recupera la inversión y genera
+                    valor positivo.</p>
             </div>
         </div>
     </section>
@@ -695,7 +787,8 @@
             <div class="section-header">
                 <span class="section-tag">Hoja de Ruta</span>
                 <h2 class="section-title">Plan de <span class="gradient-text">ejecución</span></h2>
-                <p class="section-desc">Estrategia de crecimiento de 4 fases: desde la fundación hasta la consolidación regional.</p>
+                <p class="section-desc">Estrategia de crecimiento de 4 fases: desde la fundación hasta la consolidación
+                    regional.</p>
             </div>
             <div class="timeline">
                 <div class="timeline-line"></div>
@@ -775,18 +868,33 @@
                 <div class="contact-info">
                     <span class="section-tag">Contacto</span>
                     <h2 class="section-title">¿Listo para <span class="gradient-text">proteger</span> tu negocio?</h2>
-                    <p>Agenda una consulta inicial gratuita. Evaluaremos tu situación regulatoria y te mostraremos un roadmap de cumplimiento personalizado.</p>
+                    <p>Agenda una consulta inicial gratuita. Evaluaremos tu situación regulatoria y te mostraremos un
+                        roadmap de cumplimiento personalizado.</p>
                     <div class="contact-details">
                         <div class="contact-item">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="2"/><path d="M3 7l9 6 9-6" stroke="currentColor" stroke-width="2"/></svg>
-                            <span>contacto@data-shield.co</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor"
+                                    stroke-width="2" />
+                                <path d="M3 7l9 6 9-6" stroke="currentColor" stroke-width="2" />
+                            </svg>
+                            <span>contacto@core-guard.co</span>
                         </div>
                         <div class="contact-item">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="2"/></svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"
+                                    stroke="currentColor" stroke-width="2" />
+                                <circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="2" />
+                            </svg>
                             <span>Medellín, Colombia</span>
                         </div>
                         <div class="contact-item">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" stroke="currentColor" stroke-width="2"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10A15.3 15.3 0 0112 2z" stroke="currentColor" stroke-width="2"/></svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"
+                                    stroke="currentColor" stroke-width="2" />
+                                <path
+                                    d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10A15.3 15.3 0 0112 2z"
+                                    stroke="currentColor" stroke-width="2" />
+                            </svg>
                             <span>Operaciones en Colombia, Chile y LATAM</span>
                         </div>
                     </div>
@@ -817,12 +925,14 @@
                     </div>
                     <div class="form-group">
                         <label for="message">Mensaje</label>
-                        <textarea id="message" name="message" rows="4" placeholder="Cuéntanos sobre tu necesidad..."></textarea>
+                        <textarea id="message" name="message" rows="4"
+                            placeholder="Cuéntanos sobre tu necesidad..."></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
                         <span>Enviar solicitud</span>
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                            <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </button>
                 </form>
@@ -838,17 +948,18 @@
                     <div class="nav-logo">
                         <div class="logo-icon">
                             <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
-                                <path d="M16 2L28 9V23L16 30L4 23V9L16 2Z" stroke="url(#footerGrad)" stroke-width="2" fill="none"/>
-                                <circle cx="16" cy="16" r="3" fill="url(#footerGrad)"/>
+                                <path d="M16 2L28 9V23L16 30L4 23V9L16 2Z" stroke="url(#footerGrad)" stroke-width="2"
+                                    fill="none" />
+                                <circle cx="16" cy="16" r="3" fill="url(#footerGrad)" />
                                 <defs>
                                     <linearGradient id="footerGrad" x1="4" y1="2" x2="28" y2="30">
-                                        <stop offset="0%" stop-color="#00F0FF"/>
-                                        <stop offset="100%" stop-color="#7B61FF"/>
+                                        <stop offset="0%" stop-color="#00F0FF" />
+                                        <stop offset="100%" stop-color="#7B61FF" />
                                     </linearGradient>
                                 </defs>
                             </svg>
                         </div>
-                        <span class="logo-text">DATA-SHIELD</span>
+                        <span class="logo-text">CORE-GUARD</span>
                     </div>
                     <p>Tu dato seguro, tu negocio protegido.</p>
                 </div>
@@ -875,7 +986,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 DATA-SHIELD. Todos los derechos reservados.</p>
+                <p>&copy; 2026 CORE-GUARD. Todos los derechos reservados.</p>
                 <p>Consultora de Gobernanza IA & Seguridad de Datos para LATAM</p>
             </div>
         </div>
@@ -883,4 +994,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>

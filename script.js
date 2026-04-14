@@ -1,5 +1,5 @@
 /* ============================================
-   DATA-SHIELD — Interactive Scripts
+   CORE-GUARD — Interactive Scripts
    Particle System, Animations, Navigation
    ============================================ */
 
@@ -212,35 +212,35 @@ document.addEventListener('DOMContentLoaded', () => {
     // ==========================================
     function animateCounters() {
         const counters = document.querySelectorAll('.stat-number[data-count]');
-        
+
         const counterObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     const target = parseInt(entry.target.getAttribute('data-count'));
                     const duration = 2000;
                     const startTime = performance.now();
-                    
+
                     function updateCount(currentTime) {
                         const elapsed = currentTime - startTime;
                         const progress = Math.min(elapsed / duration, 1);
-                        
+
                         // Easing: ease-out cubic
                         const eased = 1 - Math.pow(1 - progress, 3);
                         const current = Math.floor(eased * target);
-                        
+
                         entry.target.textContent = current.toLocaleString('es-CO');
-                        
+
                         if (progress < 1) {
                             requestAnimationFrame(updateCount);
                         }
                     }
-                    
+
                     requestAnimationFrame(updateCount);
                     counterObserver.unobserve(entry.target);
                 }
             });
         }, { threshold: 0.5 });
-        
+
         counters.forEach(counter => counterObserver.observe(counter));
     }
 
@@ -251,15 +251,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // ACTIVE NAV LINK HIGHLIGHT
     // ==========================================
     const sections = document.querySelectorAll('section[id]');
-    
+
     function highlightNav() {
         const scrollY = window.scrollY + 120;
-        
+
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.offsetHeight;
             const sectionId = section.getAttribute('id');
-            
+
             if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
                 document.querySelectorAll('.nav-link').forEach(link => {
                     link.style.color = '';
@@ -279,22 +279,22 @@ document.addEventListener('DOMContentLoaded', () => {
     // CONTACT FORM
     // ==========================================
     const contactForm = document.getElementById('contactForm');
-    
+
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        
+
         const submitBtn = document.getElementById('submitBtn');
         const originalContent = submitBtn.innerHTML;
-        
+
         submitBtn.innerHTML = '<span>Enviando...</span>';
         submitBtn.style.opacity = '0.7';
         submitBtn.disabled = true;
-        
+
         setTimeout(() => {
             submitBtn.innerHTML = '<span>✓ Solicitud enviada</span>';
             submitBtn.style.opacity = '1';
             submitBtn.style.background = 'linear-gradient(135deg, #00D68F, #00F0FF)';
-            
+
             setTimeout(() => {
                 submitBtn.innerHTML = originalContent;
                 submitBtn.style.background = '';
@@ -317,10 +317,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const centerY = rect.height / 2;
             const rotateX = (y - centerY) / centerY * -2;
             const rotateY = (x - centerX) / centerX * 2;
-            
+
             card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
         });
-        
+
         card.addEventListener('mouseleave', () => {
             card.style.transform = '';
         });
@@ -335,10 +335,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const rect = card.getBoundingClientRect();
             const x = e.clientX - rect.left;
             const y = e.clientY - rect.top;
-            
+
             card.style.background = `radial-gradient(circle 120px at ${x}px ${y}px, rgba(0, 240, 255, 0.06), transparent)`;
         });
-        
+
         card.addEventListener('mouseleave', () => {
             card.style.background = '';
         });
@@ -352,7 +352,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (heroTitle) {
         heroTitle.style.opacity = '0';
         heroTitle.style.transform = 'translateY(20px)';
-        
+
         setTimeout(() => {
             heroTitle.style.transition = 'all 0.8s cubic-bezier(0.23, 1, 0.32, 1)';
             heroTitle.style.opacity = '1';
@@ -364,7 +364,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (heroSubtitle) {
         heroSubtitle.style.opacity = '0';
         heroSubtitle.style.transform = 'translateY(20px)';
-        
+
         setTimeout(() => {
             heroSubtitle.style.transition = 'all 0.8s cubic-bezier(0.23, 1, 0.32, 1)';
             heroSubtitle.style.opacity = '1';
@@ -376,7 +376,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (heroActions) {
         heroActions.style.opacity = '0';
         heroActions.style.transform = 'translateY(20px)';
-        
+
         setTimeout(() => {
             heroActions.style.transition = 'all 0.8s cubic-bezier(0.23, 1, 0.32, 1)';
             heroActions.style.opacity = '1';
